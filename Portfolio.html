@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        nav {
+            background-color: #3b5998;
+            padding: 0px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 0px;
+        }
+    
+        nav ul li a {
+            display: inline-block;
+            padding: 1em;
+            text-decoration: none;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4a69bd;
+        }
+
+        .About {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .About h1, .About h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .About p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .heading {
+            color: #333;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .education-table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-table th, .education-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .education-table th {
+            background-color: #3b5998;
+            color: #fff;
+        }
+
+        .education-table td {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .skills-table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-table th, .skills-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .skills-table th {
+            background-color: #3b5998;
+            color: #fff;
+        }
+
+        .skills-table td {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .achievements {
+            margin: 20px auto;
+            width: 80%;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flex-fam {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .flexbox {
+            flex: 0 0 48%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            padding: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .heading {
+            color: #fff;
+            background-color: #3b5998;
+            text-align: center;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+        .details {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        @media queries and (max-width:480px) {
+            nav ul li a {
+            display: inline-block;
+            padding: 0.1em;
+            
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">About me</a></li>
+            <li><a href="#about">Education</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#contact">Achievements</a></li>
+        </ul>
+    </nav>
+       
+    <div class="About">
+        <img src="portfolio.jpg" alt="Bakhtawar" style="display: block; margin: 0 auto; border-radius: 50%; width: 200px; height: 300px;">
+        <h1>Bakhtawar Baig</h1>
+        <h2>WEB DEVELOPER</h2>
+        <p>Hey there! I'm Bakhtawar, a passionate web developer with a knack for crafting engaging online experiences. I thrive on blending creativity with technical expertise to build sleek, responsive websites that make a statement.
+    
+            Driven by curiosity and fueled by a love for innovation, I'm constantly pushing boundaries and exploring new possibilities in web development. From dynamic web applications to pixel-perfect designs, I'm dedicated to delivering top-notch solutions that captivate and inspire.
+            
+            When I'm not coding, you'll find me exploring the outdoors, capturing moments through my lens, or diving into a good book. I'm also committed to using technology for positive change and giving back to the community.
+            
+            Let's connect and create something amazing together!</p>
+    
+        <button id="downloadBtn">Download my Resume</button>
+    </div>
+    
+    
+    <h2 class="heading">Education</h2>
+    <table class="education-table">
+        <thead>
+            <tr>
+                <th>Qualification</th>
+                <th>Duration</th>
+                <th>Institution</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matric</td>
+                <td>2018-2020</td>
+                <td>Unique Group of Schools</td>
+                <td>Lahore</td>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td>2020-2022</td>
+                <td>Unique Group of Colleges</td>
+                <td>Lahore</td>
+            </tr>
+            <tr>
+                <td>Graduation</td>
+                <td>2022-2026</td>
+                <td>Government College University</td>
+                <td>Lahore</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading">Skills</h2>
+    <table class="skills-table">
+        <thead>
+            <tr>
+                <th>Skill</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MS Office Suite</td>
+                <td>Proficient in using Microsoft Office applications including Word for document creation, Excel for spreadsheets and data analysis, PowerPoint for presentations, and Access for database management.</td>
+            </tr>
+            <tr>
+                <td>Object Oriented Programming (OOP)</td>
+                <td>Familiar with OOP concepts such as encapsulation, inheritance, and polymorphism. Experienced in using OOP languages like Java and C++ to develop modular and scalable software applications.</td>
+            </tr>
+            <tr>
+                <td>Front-end development</td>
+                <td>Skilled in HTML, CSS, and JavaScript for building responsive and interactive user interfaces. Proficient in front-end frameworks such as Bootstrap and React to streamline development processes and enhance user experience.</td>
+            </tr>
+            <tr>
+                <td>Back-end development</td>
+                <td>Experienced in server-side programming languages like Node.js, PHP, and Python for building robust back-end systems. Knowledgeable in database management systems such as MySQL and MongoDB to store and retrieve data efficiently.</td>
+            </tr>
+            <tr>
+                <td>Languages Known</td>
+                <td>Proficient in various programming languages including C, C++, Java, JavaScript, PHP, and MSSQL. Experienced in utilizing these languages to develop diverse software applications ranging from desktop applications to web-based solutions.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="heading">Achievements</h2>
+    <div class="flex-fam">
+        <div class="flexbox" id="f1">
+            <div class="fries">
+                <div class="slideshow-container">
+                    <img class="mySlides" src="fries1.png">
+                    <img class="mySlides" src="fries2.png">
+                    <img class="mySlides" src="fries3.png">
+                    <img class="mySlides" src="fries4.png">
+                    <img class="mySlides" src="fries5.png">
+    
+    
+                    <a class="prev" onclick="plusSlides(-1, 'fries')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'fries')">&#10095;</a>
+                </div>
+                <p class="heading">RESTAURANT WEBSITE</p>
+            </div>
+        </div>
+        
+        <div class="flexbox" id="f2">
+            <div class="travel">
+                <div class="slideshow-container">
+                    <img class="mySlides" src="dest1.jpg">
+                    <img class="mySlides" src="dest2.jpg">
+                    <img class="mySlides" src="dest3.jpg">
+                    <img class="mySlides" src="dest4.jpg">
+    
+                    <a class="prev" onclick="plusSlides(-1, 'travel')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'travel')">&#10095;</a>
+                </div>
+                <p class="heading">TRAVEL AGENCY</p>
+            </div>
+        </div>
+        
+        <script>
+            var slideIndex = [];
+            slideIndex['fries'] = 1;
+            slideIndex['travel'] = 1;
+        
+            showSlides(slideIndex['fries'], 'fries');
+            showSlides(slideIndex['travel'], 'travel');
+        
+            function plusSlides(n, event) {
+                showSlides(slideIndex[event] += n, event);
+            }
+        
+            function showSlides(n, event) {
+                var i;
+                var slides = document.getElementsByClassName(event)[0].getElementsByClassName("mySlides");
+                if (n > slides.length) {slideIndex[event] = 1}
+                if (n < 1) {slideIndex[event] = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex[event]-1].style.display = "block";
+            }
+            document.getElementById("downloadBtn").addEventListener("click", function() {
+                window.open("https://www.dropbox.com/preview/cv1.pdf?context=content_suggestions&role=personal.pdf", "_blank");
+            });
+        </script>
+    </div>
+    <h2 class="contact">Do I have your attention? <br> HIT ME UP!</h2>
+    <p class="details"> Contact : 0309445795 <br> LinkedIn : <a href="https://www.linkedin.com/in/bakhtawar-baig-86b966274/">https://www.linkedin.com/in/bakhtawar-baig-86b966274/</a></p>
+    <footer>
+        <p>&copy; 2024 Bakhtawar Baig. All rights reserved.</p>
+    </footer>
+</body>
+</html>
