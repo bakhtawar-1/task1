@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAMSCAPE EVENT MANAGEMENT</title>
+    <style>
+
+        nav {
+            background-color:palevioletred; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 80;
+        }
+
+        nav ul li {
+            display: inline-block; 
+            margin-right: 80px;
+        }
+    
+        nav ul li a {
+            display: inline-block; 
+            padding: 1em; 
+            text-decoration: none; 
+            color: #fff;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        nav ul li a:hover {
+            background-color:rgb(122, 4, 77);
+        }
+        .main {
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 3s ease forwards;
+            opacity: 0;
+            }
+
+        .imagee {
+            opacity: 0.5;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: auto;
+            }
+
+        .text {
+            position: relative;
+            }
+        h1{
+            color: rgb(175, 15, 68);
+            text-align: center;
+            font-size: 35px;
+            text-decoration: solid;
+        }
+        .about{
+            margin: auto; 
+            text-align: center;
+            padding: 20px; 
+            width: 70%; 
+            font-size: 20px;
+            color: rgb(243, 233, 236);
+            background-color: rgb(109, 23, 52);
+            opacity: 0;
+            animation: fadeout 4s ease forwards;
+            
+        }
+        
+        @keyframes fadeout {
+            to{
+                opacity: 0.8;
+                color: rgb(255, 254, 254);
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1; 
+            }
+        }
+        h2{
+            background-color: palevioletred;
+            color: rgb(246, 241, 243);
+            text-align: left;
+            font-size: 25px;
+            text-decoration: solid ;
+        }
+        .flex-fam {
+            display: flex;
+            justify-content:center; 
+        }
+
+        .flexbox {
+            height: 300px;
+            width: 300px;
+            background-color: rgba(238, 216, 224, 0.83);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            opacity: 0; 
+            animation: fadeIn 0.5s forwards; 
+            transition: width 0.5s;
+        }
+        .flexbox:hover{
+            width: 400px;
+            opacity: 0.5;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1; 
+            }
+        }
+        .birthday{
+            width: 300px;
+            transition: width 2s;
+        }
+        .birthday:hover {
+            width: 400px;
+        }
+        .wedding{
+            width: 300px;
+            transition: width 2s;
+        }
+        .wedding:hover {
+            width: 400px;
+        }
+
+
+        .birthday img {
+            height: 270px;
+            width:auto;
+            margin-bottom: 10px;
+        }
+        
+        .wedding img {
+            height: 270px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 0;
+            max-width: 100%;
+        }
+        .heading{
+            text-align: center;
+            color: rgb(175, 15, 68) ;
+        }
+        .heading:hover{
+            cursor: pointer;
+        }
+        .h3{
+            color:rgba(238, 216, 224, 0.83);
+        }
+        .form-container {
+            background-color: rgba(238, 216, 224, 0.83);
+            padding: 20px;
+            margin: 20px auto;
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="email"], textarea, select, button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: palevioletred;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(122, 4, 77);
+        }
+        h3 {
+            background-color: rgba(238, 216, 224, 0.83);
+            margin: auto; 
+            text-align: center;
+            padding: 20px;
+            width: 70%;
+            font-size: 20px;
+            color: rgb(117, 27, 54);
+            border-radius: 10px; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+
+        }
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                margin-right: 30px; /* Adjust margin for smaller screens */
+            }
+            .flex-fam{
+                flex-direction: column;
+            }
+            .flexbox {
+                width: calc(50% - 40px); /* Adjust width for responsiveness */
+            }
+
+            .birthday, .wedding {
+                width: 100%;
+            }
+
+            .form-container {
+                width: 80%; /* Adjust width for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav ul li a{
+                padding: 0.3em;
+                display: inline;
+            } 
+            
+            .flexbox {
+                padding: 0px;
+                width: calc(100% - 40px); /* Adjust width for smaller screens */
+            }
+            .form-container {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+            .about{
+                width: 70%;
+                font-size: 15px;
+            }
+            h1{
+                font-size: 20px;
+            }
+            nav ul li{
+                margin-right: 0px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact us</a></li>
+           
+        </ul>
+    </nav>
+    <br>
+    <div class="main">
+        <img
+          class="imagee" src="https://media.weddingz.in/images/20220913173859/Anais-Events-6-800x661.jpg" alt="Not available">
+        <div class="text">
+          <h1>"DREAMSCAPE EVENT MANAGEMENT"</h1>
+          <p>
+            
+            <p class="about">"Dreamscape Event Management specializes in crafting unforgettable experiences tailored to your vision. With meticulous attention to detail and a passion for creativity, we transform dreams into reality, ensuring every event is uniquely remarkable and memorable."</p>
+            <br>
+            <br><br><br><br>
+          </p>
+        </div>
+    </div>
+    <h2>OUR SERVICES</h2>
+    <div class="flex-fam">
+        <div class="flexbox" id="f1">
+            <div class="birthday">
+                <img src="https://i.pinimg.com/474x/7a/62/39/7a623947aa8e425a4f9fd319ebeddb18.jpg" alt="image not available">
+                <p class="heading">Birthday Event</p>
+                
+            </div>
+        </div>
+
+        <div class="flexbox" id="f2">
+            <div class="wedding">
+                <img src="https://i.pinimg.com/originals/00/9b/d1/009bd1de14cb076f6f6f929f03dad61a.jpg" alt="img not available">
+                <p class="heading">Wedding Event</p>
+                
+            </div>
+        </div>
+
+        <div class="flexbox" id="f3">
+            <div class="wedding">
+                <img src="https://cdn.cherishx.com/uploads/1687940268_small.jpg" alt="not available">
+                <P class="heading">Baby Shower</P>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <h2>BOOK APPOINTMENTS</h2>
+    <div class="form-container">
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <select name="event-type" required>
+                <option value="" disabled selected>Select Event Type</option>
+                <option value="birthday">Birthday Event</option>
+                <option value="wedding">Wedding Event</option>
+                <option value="baby-shower">Baby Shower</option>
+            </select>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <h2>WHO ARE WE?</h2>
+    <h3>"DREAMSCAPE EVENT MANAGEMENT" specializes in curating unforgettable experiences tailored to your unique vision. With meticulous attention to detail and a passion for creativity, we transform dreams into reality, ensuring each event is a memorable and cherished moment. From enchanting birthday celebrations to timeless wedding ceremonies and joyful baby showers, we pride ourselves on delivering exceptional service and creating magical atmospheres where love and joy flourish. Let us turn your special occasions into extraordinary memories that will last a lifetime.</h3>
+    <h2>For more Information:</h2>
+    <h3>
+        📞 : 04231617789
+        <br>
+        Address : 28 Park Road London
+    </h3>
+</body>
+</html>
